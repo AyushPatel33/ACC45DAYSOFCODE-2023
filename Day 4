@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    while (T--) {
+        int X, Y; // Number of students and chairs Chef already has
+        scanf("%d %d", &X, &Y);
+
+        int extraChairsNeeded = X - Y; // Calculate the difference
+
+        if (extraChairsNeeded < 0) {
+            extraChairsNeeded = 0; // If Chef already has more chairs than students, no extra chairs are needed.
+        }
+
+        printf("%d\n", extraChairsNeeded);
+    }
+
+    return 0;
+}
