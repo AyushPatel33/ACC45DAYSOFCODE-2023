@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    while (T--) {
+        int N; // Number of friends
+        scanf("%d", &N);
+
+        // Calculate the minimum number of cars required
+        int cars = (N + 3) / 4; // Round up to the nearest multiple of 4
+
+        printf("%d\n", cars);
+    }
+
+    return 0;
+}
