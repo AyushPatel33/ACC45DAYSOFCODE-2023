@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+    
+    while (T--) {
+        int X, Y; // Geyser and bucket capacity
+        scanf("%d %d", &X, &Y);
+        
+        // Calculate the maximum number of people that can take a bath
+        int maxPeople = (X / (2 * Y));
+        
+        printf("%d\n", maxPeople);
+    }
+    
+    return 0;
+}
