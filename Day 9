@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T); // Input number of test cases
+
+    while (T--) {
+        int X, Y;
+        scanf("%d %d", &X, &Y); // Input X and Y for each test case
+
+        if (X * 2 <= Y) {
+            printf("0\n"); // If renting for 2 months is less than or equal to buying, don't rent
+        } else {
+            int months = Y / X; // Calculate the maximum number of months Chef can rent
+            printf("%d\n", months);
+        }
+    }
+
+    return 0;
+}
