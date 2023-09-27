@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+    
+    while (T--) {
+        int X, Y; // Amount Chef has and cost of one chocolate
+        scanf("%d %d", &X, &Y);
+        
+        int chocolates = X / Y; // Calculate the maximum number of chocolates
+        printf("%d\n", chocolates); // Output the result
+    }
+    
+    return 0;
+}
