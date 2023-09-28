@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+
+    while (T--) {
+        int N, M;
+        scanf("%d %d", &N, &M);
+
+        // Calculate the maximum possible runs Chef's team can score with the remaining overs
+        int max_possible_runs = M * 6;
+
+        // Check if Chef's team can win
+        if (max_possible_runs >= N) {
+            printf("YES\n");
+        } else {
+            printf("NO\n");
+        }
+    }
+
+    return 0;
+}
