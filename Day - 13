@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    while (T--) {
+        int A, B, X, Y; // Power requirements and Helium-3 data
+        scanf("%d %d %d %d", &A, &B, &X, &Y);
+
+        // Calculate the total power generated from available Helium-3
+        int total_power = X * Y;
+
+        // Check if the total power generated can meet the government's requirements
+        if (total_power >= A * B) {
+            printf("Yes\n");
+        } else {
+            printf("No\n");
+        }
+    }
+
+    return 0;
+}
