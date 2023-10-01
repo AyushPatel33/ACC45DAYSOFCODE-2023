@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+
+    while (T--) {
+        int X, Y;
+        scanf("%d %d", &X, &Y);
+
+        // Calculate the minimum number of moves
+        int moves = (X + Y - 1) / Y;
+
+        printf("%d\n", moves);
+    }
+
+    return 0;
+}
