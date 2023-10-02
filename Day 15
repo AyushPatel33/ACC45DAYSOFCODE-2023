@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int min_operations(int n, int x) {
+    // Calculate the minimum of flipping all cards to face up or face down.
+    int min_ops = (x < n - x) ? x : n - x;
+    return min_ops;
+}
+
+int main() {
+    int t; // Number of test cases
+    scanf("%d", &t);
+    
+    while (t--) {
+        int n, x; // Total number of cards and initially face-up cards
+        scanf("%d %d", &n, &x);
+        
+        int result = min_operations(n, x);
+        printf("%d\n", result);
+    }
+    
+    return 0;
+}
