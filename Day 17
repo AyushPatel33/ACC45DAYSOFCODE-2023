@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main() {
+    int T, N;
+    scanf("%d", &T); // Read the number of test cases
+    
+    while (T--) {
+        scanf("%d", &N); // Read the seat number
+        
+        if (N % 2 == 1) {
+            // If the seat number is odd, it's a Single seat
+            if (N <= 15) {
+                // If it's in the first 15 seats, it's a Lower Single
+                printf("Lower Single\n");
+            } else {
+                // Otherwise, it's an Upper Single
+                printf("Upper Single\n");
+            }
+        } else {
+            // If the seat number is even, it's a Double seat
+            if (N <= 15) {
+                // If it's in the first 15 seats, it's a Lower Double
+                printf("Lower Double\n");
+            } else {
+                // Otherwise, it's an Upper Double
+                printf("Upper Double\n");
+            }
+        }
+    }
+    
+    return 0;
+}
