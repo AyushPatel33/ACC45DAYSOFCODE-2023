@@ -1,0 +1,17 @@
+// to find the given number's reminder is equal to 3 or not
+#include <stdio.h>
+int main()
+{
+    int x;
+    printf ("Enter Value ");
+    scanf ("%d", &x);
+    if ((x%11)==3)
+    {
+        printf("Equal to 3");
+    }
+    else
+    {
+        printf("Not Equal");
+    }
+    return 0;
+}
