@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    
+    while (T--) {
+        int C, X, Y;
+        scanf("%d %d %d", &C, &X, &Y);
+
+        int cost = 0;
+        if (X >= C) {
+            cost = C * Y;
+        } else {
+            cost = X * Y + (C - X) * Y;
+        }
+
+        printf("%d\n", cost);
+    }
+
+    return 0;
+}
