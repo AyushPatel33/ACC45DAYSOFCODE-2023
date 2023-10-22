@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+
+    while (T--) {
+        int a, b, c, w, x, y, z;
+        scanf("%d %d %d %d %d %d %d", &a, &b, &c, &w, &x, &y, &z);
+
+        // Check if it is possible to measure the weight
+        if (a <= w && b <= w && c <= w) {
+            printf("YES\n");
+        } else if ((a + b <= w && c <= x) || (a + c <= x && b <= w) || (b + c <= y && a <= w)) {
+            printf("YES\n");
+        } else if (a + b + c <= x + y + z) {
+            printf("YES\n");
+        } else {
+            printf("NO\n");
+        }
+    }
+
+    return 0;
+}
