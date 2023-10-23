@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    while (T--) {
+        int X, Y; // Number of plates Chef prepared and plates each person takes
+        scanf("%d %d", &X, &Y);
+
+        // Calculate the maximum number of neighbors Chef can feed completely
+        int max_neighbors = X / Y;
+
+        printf("%d\n", max_neighbors);
+    }
+
+    return 0;
+}
