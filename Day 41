@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    while (T--) {
+        int N; // Number of spooky days
+        scanf("%d", &N);
+
+        int remainingDays = N % 7;
+        int totalFavoriteMeals = (N / 7) * 2;
+
+        if (remainingDays >= 1) {
+            totalFavoriteMeals += (remainingDays >= 6) ? 1 : 0;
+        }
+
+        printf("%d\n", totalFavoriteMeals);
+    }
+
+    return 0;
+}
