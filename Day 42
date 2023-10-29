@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    while (T--) {
+        int P, Q; // Scores of Alice and Bob
+        scanf("%d %d", &P, &Q);
+
+        // Calculate the number of serves made so far
+        int total_serves = P + Q;
+        
+        // If the total number of serves is even, it's Alice's serve; otherwise, it's Bob's serve
+        if (total_serves % 4 == 0) {
+            printf("Alice\n");
+        } else {
+            printf("Bob\n");
+        }
+    }
+
+    return 0;
+}
