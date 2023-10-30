@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int T; // Number of test cases
+    scanf("%d", &T);
+
+    while (T--) {
+        int N, M; // Cost of online order and restaurant
+        scanf("%d %d", &N, &M);
+
+        // Calculate the discounted cost of the online order
+        double discountedOnlineCost = 0.9 * N;
+
+        if (discountedOnlineCost < M) {
+            printf("ONLINE\n");
+        } else if (discountedOnlineCost > M) {
+            printf("DINING\n");
+        } else {
+            printf("EITHER\n");
+        }
+    }
+
+    return 0;
+}
