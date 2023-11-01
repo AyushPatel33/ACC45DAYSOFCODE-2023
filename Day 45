@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T); // Number of test cases
+
+    while (T--) {
+        int N, M;
+        scanf("%d %d", &N, &M);
+
+        // Calculate the minimum number of extra shoes Chef needs to buy
+        int extra_shoes = 0;
+
+        if (N * 2 <= M) {
+            extra_shoes = 0;
+        } else {
+            extra_shoes = (N - M / 2) * 2;
+            if (M % 2 != 0) {
+                extra_shoes++;
+            }
+        }
+
+        printf("%d\n", extra_shoes);
+    }
+
+    return 0;
+}
