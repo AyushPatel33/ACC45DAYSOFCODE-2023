@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int T;
+    scanf("%d", &T);
+    
+    while (T--) {
+        int A, B;
+        scanf("%d %d", &A, &B);
+        
+        // Calculate the valuation of each offer
+        int valA = 10 * A;
+        int valB = 5 * B;  // Note: 20% is equivalent to 5 times 10%
+        
+        if (valA > valB) {
+            printf("FIRST\n");
+        } else if (valB > valA) {
+            printf("SECOND\n");
+        } else {
+            printf("ANY\n");
+        }
+    }
+    
+    return 0;
+}
